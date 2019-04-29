@@ -1,0 +1,18 @@
+{% extends "base.html.j2" %}
+{% block mainhead %}
+<!-- add app level deps here -->
+{% block head %}{% endblock head %}
+{% endblock mainhead %}
+{% block maincontent %}
+<!-- TODO: add navbar here -->
+
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-info">
+  <div class="container">
+    <a class="navbar-brand" href="#">Election Scam</a>
+  </div>
+</nav>
+<main class="container">
+{% block content %}{% endblock content %}
+</main>
+{% endblock maincontent %}

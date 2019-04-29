@@ -1,0 +1,56 @@
+{% extends 'home/base.html.j2' %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.js"></script>
+    <script src="{% static "js/table.js" %}"></script>
+    <script type="text/javascript">
+        var TESTMODEL_LIST_JSON_URL = '{% url "home_json" %}';
+        // translations for datatables
+        var dt_language = {
+            "emptyTable":     "No data available in table",
+            "info":           "Showing _START_ to _END_ of _TOTAL_ entries",
+            "infoEmpty":      "Showing 0 to 0 of 0 entries",
+            "infoFiltered":   "(filtered from _MAX_ total entries)",
+            "infoPostFix":    "",
+            "thousands":      ",",
+            "lengthMenu":     "Show _MENU_ entries",
+            "loadingRecords": "Loading...",
+            "processing":     "Processing...",
+            "search":         "Search:",
+            "zeroRecords":    "No matching records found",
+            "paginate": {
+                "first":      "First",
+                "last":       "Last",
+                "next":       "Next",
+                "previous":   "Previous"
+            },
+            "aria": {
+                "sortAscending":  ": activate to sort column ascending",
+                "sortDescending": ": activate to sort column descending"
+            }
+        }
+    </script>
+{% endblock head %}
+{% block content %}
+<div class="row">
+	<br>
+</div>
+<div class="row">
+	<div class="col">
+    <table class="datatable table table-striped table-hover">
+        <thead class="thead-light">
+			<tr>
+				<th>VID<th>
+				<th>Name<th>
+				<th>Address<th>
+				<th>Number<th>
+				<th>Gender<th>
+			</tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+	</div>
+</div>
+{% endblock %}
